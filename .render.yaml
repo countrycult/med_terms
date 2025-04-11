@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: icd10-react-app
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    buildEnvVars:
+      - key: NODE_ENV
+        value: development
+    envVars:
+      - key: NODE_VERSION
+        value: 18
